@@ -20,7 +20,7 @@ O programa contém 7 senhas principais:
 1. **HZ4K7M3Q** - Dica na Máquina de Lavar
 2. **B9XN23LC** - Dica embaixo do Xbox  
 3. **V3LY8P2R** - Dica entre materiais de velas artesanais
-4. **Z1QK9R7T** - Dica na bolsinha do sex shop
+4. **Z1QK9R7T** - Dica na bolsinha
 5. **D7WJ5N8X** - Dica dentro da fronha do travesseiro
 6. **L8EM3F4Z** - Dica atrás do quadro na sala
 7. **LLLOVEEE** - Dica de Ouro (Final)
