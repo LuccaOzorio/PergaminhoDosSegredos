@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Crimson Text', serif;
+    background: linear-gradient(45deg, #8b7355, #a0926b);
+    background-image: url('parchment_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.title {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #654321;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+}
+
+.parchment-panel {
+    background: linear-gradient(135deg, #f0ebdc 0%, #e8dcc0 100%);
+    border: 3px solid #8b7355;
+    border-radius: 15px;
+    box-shadow: 
+        0 0 20px rgba(0, 0, 0, 0.3),
+        inset 0 0 20px rgba(139, 115, 85, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.parchment-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(139, 115, 85, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(101, 67, 33, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 60%, rgba(160, 130, 98, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.content {
+    padding: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.input-label {
+    display: block;
+    font-size: 1.2rem;
+    color: #654321;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.input-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#senha {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px 15px;
+    font-size: 1.1rem;
+    font-family: 'Crimson Text', serif;
+    border: 2px solid #8b7355;
+    border-radius: 8px;
+    background: #faf5eb;
+    color: #654321;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#senha:focus {
+    outline: none;
+    border-color: #654321;
+    box-shadow: 0 0 10px rgba(101, 67, 33, 0.3);
+}
+
+.btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-family: 'Crimson Text', serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background: #8b7355;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #654321;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background: #a08262;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #8b7355;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.message-area {
+    background: #faf5eb;
+    border: 2px solid #d4c4a8;
+    border-radius: 10px;
+    padding: 30px;
+    min-height: 300px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #654321;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.message-area p {
+    margin-bottom: 15px;
+}
+
+.message-area p:last-child {
+    margin-bottom: 0;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #f0ebdc 0%, #e8dcc0 100%);
+    margin: 10% auto;
+    padding: 40px;
+    border: 3px solid #8b7355;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    animation: slideIn 0.3s ease;
+}
+
+.modal-content h2,
+.modal-content h3 {
+    font-family: 'Cinzel', serif;
+    color: #654321;
+    margin-bottom: 20px;
+}
+
+.modal-content h2 {
+    font-size: 2rem;
+}
+
+.modal-content h3 {
+    font-size: 1.5rem;
+}
+
+.modal-content p {
+    font-size: 1.1rem;
+    color: #654321;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { 
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+    
+    .content {
+        padding: 30px 20px;
+    }
+    
+    .input-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .modal-content {
+        margin: 20% auto;
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.5rem;
+    }
+    
+    .content {
+        padding: 20px 15px;
+    }
+    
+    .message-area {
+        padding: 20px;
+        min-height: 250px;
+    }
+}
+

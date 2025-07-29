@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pergaminho dos Segredos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Pergaminho dos Segredos</h1>
+        
+        <div class="parchment-panel">
+            <div class="content">
+                <label for="senha" class="input-label">Digite a senha encontrada:</label>
+                <div class="input-group">
+                    <input type="text" id="senha" maxlength="8" placeholder="Senha de 8 caracteres">
+                    <button id="btnEnviar" class="btn btn-primary">Enviar</button>
+                    <button id="btnDicaExtra" class="btn btn-secondary">Dica Extra</button>
+                </div>
+                
+                <div id="mensagem" class="message-area">
+                    <p>Bem-vindo ao Pergaminho dos Segredos!</p>
+                    <p>Digite uma senha para revelar uma mensagem especial...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para mensagem final -->
+    <div id="modalFinal" class="modal">
+        <div class="modal-content">
+            <h2>🎉 PARABÉNS! 🎉</h2>
+            <p>Você completou todas as etapas!</p>
+            <p>O amor verdadeiro sempre encontra seu caminho.</p>
+            <button id="btnFecharModal" class="btn btn-primary">Fechar</button>
+        </div>
+    </div>
+
+    <!-- Modal para dica extra -->
+    <div id="modalDica" class="modal">
+        <div class="modal-content">
+            <h3>Dica Extra</h3>
+            <p id="textodicaExtra"></p>
+            <button id="btnFecharDica" class="btn btn-primary">Fechar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
